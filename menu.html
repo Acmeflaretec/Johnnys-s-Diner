@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- style css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Responsive-->
+  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- fevicon -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <!-- Tweaks for older IEs-->
+  <link
+    rel="stylesheet"
+    href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+    media="screen"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css"
+  />
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
+  ><![endif]-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Custom styles for the header */
+
+/* Custom styles for the header */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+
+}
+
+.navigation .navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.navigation .navbar-nav .nav-item .nav-link {
+  color: #fff;
+}
+
+.navigation .navbar-nav .nav-item .nav-link:hover {
+  color: #f2f2f2;
+}
+
+.infomaco li {
+  margin-bottom: 10px;
+}
+
+.infomaco a {
+  color: #fff;
+}
+
+.infomaco a:hover {
+  color: #f2f2f2;
+}
+
+/* Responsive Styles */
+
+/* Small devices (up to 576px) */
+@media (max-width: 576px) {
+  .logo img {
+    margin-bottom: 50%;
+    width: 100px;
+  }
+
+  .navigation .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+  .mow-item{
+    margin-top: 40%;
+  }
+ .header{
+    height: 130px;
+ }
+ .logo{
+    margin-top: -40px;
+ }
+ .navbar-toggler-icon{
+    margin-top: -70px;
+
+ }
+
+}
+
+/* Medium devices (577px to 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .header {
+    padding: 10px 0;
+ 
+  }
+
+  .logo img {
+    width: 70px;
+    margin-top: -40px;
+  }
+
+  .navigation .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+  }
+  .mow-item{
+    margin-top: 15%;
+  }
+  
+}
+
+/* Large devices (993px and above) */
+@media (min-width: 993px) {
+  .logo img {
+    width: 80px;
+  }
+  .mow-item{
+    margin-top: 10%;
+  }
+  
+}
+
+    h1 {
+      margin: 0;
+      font-size: 50px;
+      font-weight: bolder;
+
+    }
+    
+
+    .menu-section {
+      padding: 20px;
+    }
+
+    .menu-category {
+      margin-bottom: 40px;
+    }
+
+    .menu-category h2 {
+      margin: 0;
+      font-size: 30px;
+      color: #BC0116;
+  
+      font-weight: bold;
+      border-bottom: px solid #000;
+      padding-bottom: 10px;
+    }
+
+    .menu-item {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: relative; /* Add position relative */
+}
+.menu-item::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #BC0116; /* Add line color */
+}
+
+
+.menu-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #000;
+  
+  display: flex; /* Add flex display */
+  justify-content: space-between; /* Add space between dish name and price */
+  align-items: center; /* Vertically align dish name and price */
+}
+
+.menu-item p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.menu-item .price {
+  
+  color: #BC0116;
+  font-size: 20px;
+}
+  </style>
+</head>
+
+<body>
+<div>
+    
+
+</div>
+
+<header>
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+      <link rel="stylesheet" href="path/to/your/css/file.css">
+      <script src="path/to/your/javascript/file.js"></script>
+    </head>
+    
+    <body>
+      <div class="header">
+        <div class="container-fluid">
+          <div class="row d-flex">
+            <div class="col-xl-1 col-lg-3 col-sm-2 col logo_section">
+              <div class="full">
+                <div class="center-desk">
+                  <div class="logo">
+                    <a href="index.html"><img src="./images/logo.png" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-9 col-md-10 col-sm-12">
+                <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                   <button id="collapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarsExample04">
+                      <ul class="navbar-nav mr-auto">
+                         <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="testimonial.html">Gallery</a>
+                         </li>
+                         <!-- <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                         </li> -->
+                         <!-- <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                         </li> -->
+                         <!-- <li class="nav-item">
+                            <a class="nav-link" style="background: transparent;" href="Javascript:void(0)"><i class="fa fa-search"></i></a>
+                         </li> -->
+                      </ul>
+                   </div>
+                </nav>
+             </div>
+            <div class="col-md-4 re_no">
+              <ul class="infomaco">
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i> +91 70129 17077
+                </li>
+                <li>
+                  <a href="Javascript:void(0)"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    info@johnnys.in</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Your webpage content goes here -->
+    
+      <script src="path/to/any/other/javascript/file.js"></script>
+    </body>
+    
+    </html>
+
+</header>
+    
+
+
+  <section class="menu-section">
+    <div class="mow-item">
+
+    
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-6">
+          <div class="menu-category">
+            <h2>Fried Chickens</h2>
+      
+
+            <div class="menu-item">
+                <h3>Classic - 2pc <span class="price">₹189</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>Classic - 4pc <span class="price">₹359</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>Classic - 8pc <span class="price">₹699</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>Nashville - 2pc <span class="price">₹229</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>Nashville - 4pc <span class="price">₹399</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>Nashville - 8pc <span class="price">₹799</span></h3>
+              </div>
+              
+          </div>
+          
+        </div>
+
+        <div class="col-md-6">
+          <div class="menu-category">
+            <h2>Chicken Burgers</h2>
+            <div class="menu-item">
+                <h3>The Mayo Ecstacy <span class="price">₹199</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>The Spicy BBQ <span class="price">₹219</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>The Fiery Redhead Chicken<span class="price">₹239</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>The Fried Chicken - Classic <span class="price">₹199</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>The Fried Chicken - Nashville<span class="price">₹199</span></h3>
+              </div>
+              <div class="menu-item">
+                <h3>Keto Chicken Burger<span class="price">₹199</span></h3>
+              </div>
+              
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="menu-category">
+              <h2>Beef Burgers</h2>
+              <div class="menu-item">
+                  <h3>The Classic <span class="price">₹229</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The Double Smashed<span class="price">₹249</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The Fiery Redhead Beef<span class="price">₹239</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The Juicy Lucy <span class="price">₹289</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The BBQd Beef<span class="price">₹289</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>Keto Beef Burger<span class="price">₹229</span></h3>
+                </div>
+                
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="menu-category">
+              <h2>Chicken Wraps</h2>
+              <div class="menu-item">
+                  <h3>The Ecstacy Wrap<span class="price">₹199</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The Spiced BBQ Wrap<span class="price">₹219</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The Fried Chicken Classic Wrap<span class="price">₹229</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The Fried Chicken Nashville Wrap<span class="price">₹229</span></h3>
+                </div>
+               
+                
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-category">
+              <h2>Beef Wraps</h2>
+              <div class="menu-item">
+                  <h3>The OG<span class="price">₹229</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The BBQd Wrap<span class="price">₹239</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>The Overload<span class="price">₹289</span></h3>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-category">
+              <h2>Salads</h2>
+              <div class="menu-item">
+                  <h3>Mayo - Chicken <span class="price">₹249</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>BBQ -  Chicken<span class="price">₹249</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>Fried Classic - Chicken<span class="price">₹249</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>Fried Nashville - Chicken<span class="price">₹249</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>Classic Beef Salad<span class="price">₹249</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>Overload Beef Salad<span class="price">₹249</span></h3>
+                </div>
+                
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-category">
+              <h2>Fries</h2>
+              <div class="menu-item">
+                  <h3>Salted<span class="price">₹89</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>Peri Squared<span class="price">₹89</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>Animal Style Chicken<span class="price">₹199</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>Animal Style Beef<span class="price">₹199</span></h3>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-category">
+              <h2>Snackers</h2>
+              <div class="menu-item">
+                  <h3>Chicken popcorn<span class="price">₹159</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>Garlic Bread<span class="price">₹129</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>House Sauce<span class="price">₹39</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>Fiery Sauce<span class="price">₹39</span></h3>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="menu-category">
+              <h2>Strips</h2>
+              <div class="menu-item">
+                  <h3>4pc<span class="price">₹159</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>8pc<span class="price">₹299</span></h3>
+                </div>
+                <div class="menu-item">
+                  <h3>12pc<span class="price">₹499</span></h3>
+                </div>
+                <div class="menu-item">
+                    <h3>16pc<span class="price">₹599</span></h3>
+                  </div>
+              </div>
+          </div>
+        <!-- <div class="col-md-6">
+          <div class="menu-category">
+            <h2>Desserts</h2>
+            <div class="menu-item">
+              <h3>Item 5</h3>
+              <p>Description of item 5.</p>
+              <p class="price">$8</p>
+            </div>
+            <div class="menu-item">
+              <h3>Item 6</h3>
+              <p>Description of item 6.</p>
+              <p class="price">$10</p>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="col-md-6">
+          <div class="menu-category">
+            <h2>Meals</h2>
+            <div class="menu-item">
+              <h3>Meal 1</h3>
+              <p>Description of meal 1.</p>
+              <p class="price">$25</p>
+            </div>
+            <div class="menu-item">
+              <h3>Meal 2</h3>
+              <p>Description of meal 2.</p>
+              <p class="price">$30</p>
+            </div>
+          </div>
+        </div> -->
+
+       
+        <div class="col-md-6">
+          <div class="menu-category">
+            <h2>Burger Meals</h2>
+            <div class="menu-item">
+              <h3>Burger Meals for 1  </h3>
+             
+              <p>1 Burger + Fries + Drink </p>
+                
+              <p class="price">₹279</p>
+            </div>
+            <div class="menu-item">
+                <h3>Burger Meals for 2  </h3>
+               
+                <p>2 Burgers + 2 Fries + 2 Drink + 2 Strips</p>
+                  
+                <p class="price">₹559</p>
+              </div>
+              <div class="menu-item">
+                <h3>Burger Meals for 4 </h3>
+               
+                <p>4 Burger + 4 Fries + 4 Drink + 4 Strips</p>
+                  
+                <p class="price">₹1099</p>
+              </div>
+            
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="menu-category">
+              <h2>Fried Chicken Meal</h2>
+              <div class="menu-item">
+                <h3>The Try-it-all!</h3>
+               
+                <p>Nashville 2PC wet + 2PC Dry + 2PC All-in + 2 Drink + 2 Dip</p>
+                  
+                <p class="price">₹699</p>
+              </div>
+              <div class="menu-item">
+                  <h3>Fried Chicken Meal for 1 </h3>
+                 
+                  <p>2 PC Bone-in + 1 Dip + Fries + Drink</p>
+                    
+                  <p class="price">₹279</p>
+                </div>
+                <div class="menu-item">
+                  <h3>Fried Chicken Meal for 2</h3>
+                 
+                  <p>2 PC Bone-in + 2 PC Strips + 8PC Popcorn + 2 Dip + Fries + Drink</p>
+                    
+                  <p class="price">₹529</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Fried Chicken Meal for 4</h3>
+                   
+                    <p>8 PC Bone-in + 4 PC Strips + 16PC Popcorn + 4 Dip + Fries + 2L Drink</p>
+                      
+                    <p class="price">₹1099</p>
+                  </div>
+                  <div class="menu-item">
+                    <h3>Family Meal</h3>
+                   
+                    <p>6 PC Bone-in + 6 PC Strips + 16PC Popcorn + 2 Dip + Fries + 2L Drink</p>
+                      
+                    <p class="price">₹999</p>
+                  </div>
+                  <div class="menu-item">
+                    <h3>Party Meal</h3>
+                   
+                    <p>12 PC Bone-in + 8 PC Strips + 16PC Popcorn + 4 Dip + Fries + 2L Drink</p>
+                      
+                    <p class="price">₹1499</p>
+                  </div>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+  </section>
+  <script>
+    $(document).ready(function() {
+      // Close navbar when a menu item is clicked
+      $('.navbar-nav .nav-link').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+      });
+    });
+  </script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('click', function(event) {
+ 
+    document.getElementById("collapse").click()
+});
+    // Add animation to menu items
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      var menuItems = document.querySelectorAll(".menu-item");
+
+      function showItems() {
+        menuItems.forEach(function (item) {
+          item.classList.add("visible");
+        });
+      }
+
+      if (window.innerWidth > 768) {
+        // Show menu items when scrolled into view
+        var isInViewport = function (element) {
+          var rect = element.getBoundingClientRect();
+          var windowHeight =
+            window.innerHeight || document.documentElement.clientHeight;
+          return (
+            rect.top >= 0 &&
+            rect.top <= windowHeight &&
+            rect.bottom >= 0 &&
+            rect.bottom <= windowHeight
+          );
+        };
+
+        window.addEventListener("scroll", function () {
+          menuItems.forEach(function (item) {
+            if (isInViewport(item)) {
+              item.classList.add("visible");
+            }
+          });
+        });
+      } else {
+        // Show all menu items on mobile devices
+        showItems();
+      }
+    });
+  </script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</html>
