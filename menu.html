@@ -40,10 +40,14 @@
     /* Custom styles for the header */
 
 /* Custom styles for the header */
+body{
+    background-color: #fcba03;
+}
 .header {
-  background-color: #333;
+  background-color: #fcba03;
   color: #fff;
   padding: 20px 0;
+  height: 100px;
 }
 
 .logo img {
@@ -224,6 +228,9 @@
     </head>
     
     <body>
+        <div class="loader_bg">
+            <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+          </div>
       <div class="header">
         <div class="container-fluid">
           <div class="row d-flex">
@@ -238,18 +245,18 @@
             </div>
             <div class="col-xl-7 col-lg-9 col-md-10 col-sm-12">
                 <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                   <button id="collapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                   <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                    <span class="navbar-toggler-icon"></span>
                    </button>
                    <div class="collapse navbar-collapse" id="navbarsExample04">
                       <ul class="navbar-nav mr-auto">
-                         <li class="nav-item active">
+                         <li class="nav-item ">
                             <a class="nav-link" href="index.html">Home</a>
                          </li>
-                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                         <li class="nav-item ">
+                            <a class="nav-link" href="index.html#about">About</a>
                          </li>
-                         <li class="nav-item">
+                         <li class="nav-item active">
                             <a class="nav-link" href="menu.html">Menu</a>
                          </li>
                          <li class="nav-item">
@@ -295,7 +302,12 @@
 
 
   <section class="menu-section">
+    
     <div class="mow-item">
+        <div style="margin-top: 1%;" class="titlepage text_align_center">
+            <h1 style="color: #db331e; font-family: cursive; font-size: 60px;">Our Menu</h1>
+            <p>Explore our delicious offerings.</p>
+          </div>
 
     
     <div class="container" >
@@ -611,8 +623,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     document.addEventListener('click', function(event) {
- 
-    document.getElementById("collapse").click()
+        $('.navbar-collapse').collapse('hide');
+     
 });
     // Add animation to menu items
     
@@ -625,7 +637,6 @@
         });
       }
 
-      if (window.innerWidth > 768) {
         // Show menu items when scrolled into view
         var isInViewport = function (element) {
           var rect = element.getBoundingClientRect();
@@ -639,6 +650,13 @@
           );
         };
 
+        window.addEventListener("DOMContentLoaded", function () {
+          menuItems.forEach(function (item) {
+            if (isInViewport(item)) {
+              item.classList.add("visible");
+            }
+          });
+        });
         window.addEventListener("scroll", function () {
           menuItems.forEach(function (item) {
             if (isInViewport(item)) {
@@ -646,10 +664,7 @@
             }
           });
         });
-      } else {
-        // Show all menu items on mobile devices
-        showItems();
-      }
+     
     });
   </script>
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
